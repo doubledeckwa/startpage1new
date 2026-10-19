@@ -1,10 +1,3 @@
-/plan Почини отображение предложений от поисковика 
-Исправлено отображение предложений поисковика.
-
-Проблема была в #fetchGoogleSuggestions: Google возвращает предложения как массив строк (res[1] = ["testosteron", ...]), а код обращался к item[0], получая первую букву каждой подсказки. Теперь код корректно обрабатывает и строки, и массивы [текст, ...], а также фильтрует точное совпадение с запросом без учёта регистра.
-
-Файл изменён: C:\Users\Administrator\Downloads\startpage1new-main\startpage1new-main\index.html.
-
 <!doctype html>
 <meta charset="utf-8" />
 <meta name="color-scheme" content="dark light" />
